@@ -29,5 +29,10 @@ public class Romain {
 				
 		}
 	}
-	
+	public static void main(String[] args) {
+		Romain jules = new Romain("Jules",7);
+		System.out.println(jules.prendreParole());
+		jules.parler("Tu vas en subir les conséquences");
+		jules.recevoirCoup(6);
+	}
 }
