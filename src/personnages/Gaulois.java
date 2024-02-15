@@ -37,9 +37,9 @@ public class Gaulois {
 
 	public static void main(String[] args) {
 		Gaulois asterix = new Gaulois("Asterix", 8);
-//		System.out.println(asterix.getNom());
-//		System.out.println(asterix); 
-//		System.out.println(asterix.prendreParole());
+		System.out.println(asterix.getNom());
+		System.out.println(asterix); 
+		System.out.println(asterix.prendreParole());
 		asterix.parler("Allons battre ces gaulois");
 		Romain jules = new Romain("Jules",7);
 		asterix.frapper(jules);
