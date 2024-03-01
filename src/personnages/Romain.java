@@ -21,18 +21,19 @@ public class Romain {
 	}
 	
 	public void recevoirCoup(int forceCoup) {
+		int forceCoupinit = forceCoup;
+		assert forceCoup > 0 : "La force d'un Romain est toujours positive";
 		force -= forceCoup;
 		if (force > 0) {
-			parler("Aïe");
+			parler("Aie");
 		} else {
 			parler("J'abandonne...");
 				
 		}
+		assert forceCoup < forceCoupinit : "La force doit avoir diminu�";
 	}
 	public static void main(String[] args) {
-		Romain jules = new Romain("Jules",7);
-		System.out.println(jules.prendreParole());
-		jules.parler("Tu vas en subir les conséquences");
-		jules.recevoirCoup(6);
+		Romain jules = new Romain("Jules",-7);
+		assert jules.force > 0 : "C'est pas bon";
 	}
 }
