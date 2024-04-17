@@ -30,9 +30,9 @@ public class Gaulois {
 		romain.recevoirCoup(force / 3 * effetPotion);
 }
 	
-	public void boirePotion(int forcePotion, Gaulois gaulois) {
+	public void boirePotion(int forcePotion) {
 		effetPotion = forcePotion;
-		gaulois.parler("Merci Druide, je sens que ma force est " + effetPotion + " fois décuplé");
+		parler("Merci Druide, je sens que ma force est " + effetPotion + " fois décuplé");
 		
 	}
 
@@ -44,13 +44,13 @@ public class Gaulois {
 	public static void main(String[] args) {
 		Gaulois asterix = new Gaulois("Asterix", 8);
 //		System.out.println(asterix.getNom());
-//		System.out.println(asterix); 
+		System.out.println(asterix); 
 //		System.out.println(asterix.prendreParole());
 //		asterix.parler("Allons battre ces gaulois");
 		Romain jules = new Romain("Jules",7);
 //		asterix.frapper(jules);
 		Druide panoramix = new Druide("Panoramix",5,10);
-		asterix.boirePotion(panoramix.preparerPotion(panoramix), asterix);
+		asterix.boirePotion(panoramix.preparerPotion());
 		asterix.frapper(jules);
 		
 		
