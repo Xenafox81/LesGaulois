@@ -3,7 +3,7 @@ package personnages;
 public class Village {
 	private String nom;
 	private Chef chef;
-	private int nbVillageois = 0;
+	private int nbVillageois;
 	private Gaulois[] villageois;
 	private int nbVillageoisMaximum;
 	
@@ -11,8 +11,10 @@ public class Village {
 	
 	public Village(String nom, int nbVillageoisMaximum) {
 		this.nom = nom;
+		this.nbVillageois = 0;
 		this.nbVillageoisMaximum = nbVillageoisMaximum;
-		this.villageois = new Gaulois[nbVillageoisMaximum];
+		this.villageois = new Gaulois[nbVillageoisMaximum]; // Initialise le tableau de villageois avec la taille spécifiée
+			
 	}
 	
 
@@ -40,7 +42,7 @@ public class Village {
 	}
 	
 	public static void main(String[] args) {
-		Village village = new Village("Village des Irr�ductibles",30);
+		Village village = new Village("Village des Irr�ductibles",30);
 		Chef abraracourcix = new Chef("Abraracourcix",6,village);
 		village.setChef(abraracourcix);
 		Gaulois asterix = new Gaulois("Asterix",8);
